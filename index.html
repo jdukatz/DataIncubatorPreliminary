@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v4.js"></script>
+    <script src="d3-tip.js"></script>
+    <!-- got the tooltip code from http://bl.ocks.org/davegotz/bd54b56723c154d25eedde6504d30ad7 -->
+    <script src="processed_data/lv_MDS_agg.js"></script>
+    <script src="processed_data/lv_MDS_km.js"></script>
+    <script src="processed_data/lv_MDS_spec.js"></script>
+    <script src="processed_data/lv_PCA_agg.js"></script>
+    <script src="processed_data/lv_PCA_km.js"></script>
+    <script src="processed_data/lv_PCA_spec.js"></script>
+    <script src="processed_data/lv_tSNE_agg.js"></script>
+    <script src="processed_data/lv_tSNE_km.js"></script>
+    <script src="processed_data/lv_tSNE_spec.js"></script>
+    <script src="processed_data/lv_agg_eval.js"></script>
+    <script src="processed_data/lv_km_eval.js"></script>
+    <script src="processed_data/lv_spec_eval.js"></script>
+  </head>
+  <style>
+    .d3-tip {
+      line-height: 1;
+      padding: 6px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+    .d3-tip.n:after {
+      margin: -2px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+    .dots {
+      stroke: #000;
+      stroke-width: 1px;
+      stroke-opacity: .8;
+      fill-opacity: .8;
+    }
+
+    .dots .hidden {
+      fill: #ccc;
+      stroke-opacity: .3;
+      fill-opacity: .3;
+    }
+    .rects {
+      fill-opacity: 1;
+    }
+
+    .rects .hidden {
+      fill-opacity: .2;
+      stroke-opacity: .2;
+    }
+
+  </style>
+  <body>
+    <div id="bars"></div>
+    <br>
+    <div id="plot"></div>
+    <div id="search">
+      <input id="keywordSearch" type="text" name="keyword">
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
+  

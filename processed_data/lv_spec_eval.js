@@ -1,0 +1,1 @@
+var lv_spec_eval = {"ch_score": 37.196638098929306, "silhouette": -0.11316188639769285, "rand_index": 0.12413819617061925}

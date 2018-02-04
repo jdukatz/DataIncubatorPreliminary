@@ -1,0 +1,1 @@
+var lv_agg_eval = {"ch_score": 166.6794239639482, "silhouette": 0.08849530616970668, "rand_index": 0.13611908208701962}
